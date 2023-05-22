@@ -1,0 +1,103 @@
+.summary:hober {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.header {
+  background-color: #000;
+  color: #efefef;
+  min-height: 80px;
+  padding: 8px;
+  margin: 1px;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.title {
+  width: 70px;
+}
+
+.input {
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  outline: none;
+}
+
+.accordion {
+  background-color: #696969;
+  width: 70px;
+  padding: 6px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  transition: 0.2s;
+  float: right;
+}
+
+.menu {
+  float: left;
+  width: 200px;
+}
+
+.newThread {
+  background-color: #0000ff;
+  color: #efefef;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  outline: none;
+}
+
+.category {
+  padding-left: 10px;
+  line-height: 30px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tab {
+  background-color: #c0c0c0;
+  float: right;
+  padding-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+}
+
+.tab_item {
+  color: #565656;
+  width: calc(100% / 3);
+  height: 50px;
+  border-bottom: 3px;
+  line-height: 50px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.input[name="tab_item"] {
+  display: none;
+}
+
+.tab_content {
+  display: none;
+  padding-left: 40px;
+  clear: both;
+  overflow: hidden;
+}
+
+#rapid: checked ~ #rapid_content,
+#new: checked ~ #new_content,
+#top: checked ~ top_content {
+  display: block;
+}
+
+.tab input:checked + .tab_item {
+  background-color: #ffffff;
+  color: #ff0000;
+}
