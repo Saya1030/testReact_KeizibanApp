@@ -29,29 +29,15 @@ export const App = () => {
         </ul>
       </div>
       <div class="tab">
-        <input id="rapid" type="radio" name="tab-item" checked>
-          <label class="tab_item" for="rapid">
-            勢い
-          </label>
-        </input>
-        <input id="new" type="radio" name="tab-item">
-          <label class="tab_item" for="new">
-            新規
-          </label>
-        </input>
-        <input id="top" type="radio" name="tab-item">
-          <label class="tab_item" for="top">
-            トップ
-          </label>
-        </input>
-        <div class="tab_content" id="rapid-content">
-          <p>今熱いスレッド</p>
-        </div>
-        <div class="tab_content" id="new-content">
-          <p>新しいスレッド</p>
-        </div>
-        <div class="tab_content" id="top-content">
-          <p>人気のスレッド</p>
+        <ul class="tab-list">
+          <li class="tab-list-item active">勢い</li>
+          <li class="tab-list-item">新規</li>
+          <li class="tab-list-item">トップ</li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-content-item show">今熱いスレッド</div>
+          <div class="tab-content-item">新しいスレッド</div>
+          <div class="tab-content-item">人気のスレッド</div>
         </div>
       </div>
     </>

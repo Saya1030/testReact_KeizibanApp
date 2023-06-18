@@ -6,10 +6,13 @@
 .header {
   background-color: #000;
   color: #efefef;
-  min-height: 80px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  min-height: 30px;
   padding: 8px;
   margin: 1px;
-  border-radius: 8px;
   list-style: none;
 }
 
@@ -19,6 +22,7 @@
 
 .input {
   width: 300px;
+  height: 30px;
   border-radius: 5px;
   border: none;
   padding: 6px;
@@ -38,17 +42,22 @@
 }
 
 .menu {
+  width: 120px;
   float: left;
-  width: 200px;
+  padding: 5px;
+  background-color: #efefef;
+  border: solid 1px #000000;
+  padding-bottom: 350px;
 }
 
 .newThread {
   background-color: #0000ff;
   color: #efefef;
-  margin-top: 8px;
+  margin-top: 6px;
   border-radius: 5px;
   border: none;
-  padding: 6px;
+  padding: 5px;
+  font-size: 13px;
   outline: none;
 }
 
@@ -56,6 +65,7 @@
   padding-left: 10px;
   line-height: 30px;
   list-style: none;
+  font-size: 15px;
 }
 
 a {
@@ -63,41 +73,41 @@ a {
 }
 
 .tab {
+  width: 1200px;
   background-color: #c0c0c0;
-  float: right;
-  padding-bottom: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 700px;
+  float: left;
+  padding-bottom: 330px;
+  border: solid 1px #000000;
 }
 
-.tab_item {
+.tab-list {
   color: #565656;
-  width: calc(100% / 3);
-  height: 50px;
-  border-bottom: 3px;
-  line-height: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.tab-list-item {
+  color: #565656;
   text-align: center;
-  transition: all 0.2s ease;
+  flex: 0 0 33.33333%;
+  background-color: #eee;
+  padding: 10px 0;
 }
 
-.input[name="tab_item"] {
-  display: none;
+.tab-list-item.active {
+  background-color: #ffffff;
+  color: #ff0000;
 }
 
-.tab_content {
+.tab-content-item {
   display: none;
   padding-left: 40px;
   clear: both;
   overflow: hidden;
 }
 
-#rapid: checked ~ #rapid_content,
-#new: checked ~ #new_content,
-#top: checked ~ top_content {
+.tab-content-item.show {
   display: block;
-}
-
-.tab input:checked + .tab_item {
-  background-color: #ffffff;
-  color: #ff0000;
 }
